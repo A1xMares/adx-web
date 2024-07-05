@@ -1,0 +1,14 @@
+Adx & Adroit Overseas is a passionate team that is driven to make a difference in the world and to find sustainable solutions for the agriculture industry.
+
+/* DEV TEAM */
+    Project owner:  José Murillo
+    Contact:        jose@adroitoverseas.com
+
+    Frontend Dev:   Alejandro Mares
+    Site:           www.alxmares.com
+    Contact:        hello@alxmares.com
+
+/* SITE */
+    Language:       English
+    Standards:      HTML5, CSS3, TS
+    Frameworks:     Astro

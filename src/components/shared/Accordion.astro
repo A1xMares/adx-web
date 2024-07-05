@@ -9,7 +9,7 @@ interface Props {
 const { title, details } = Astro.props as Props;
 ---
 
-<div
+<article
   class="accordion group relative rounded-xl border border-gray-200 bg-white shadow-sm"
 >
   <button
@@ -41,7 +41,7 @@ const { title, details } = Astro.props as Props;
       {details}
     </p>
   </div>
-</div>
+</article>
 
 <script>
   function accordionSetup() {
