@@ -1,0 +1,72 @@
+---
+import FeatOneImg from "@assets/img/image_phone3.png";
+import { Icon } from "astro-icon/components";
+
+const FeatTwoBulletpoints = [
+  {
+    title: "Detailed Order Information",
+    description:
+      "Access comprehensive details about each of your orders, including quality, quantity, packing, and shipping specifications."
+  },
+  {
+    title: "Contract Review",
+    description:
+      "Easily review the terms of your contract and make sure everything is as expected."
+  },
+  {
+    title: "Track Every Step",
+    description:
+      "Follow the progress of your orders and get updates on all activities, ensuring you’re always in the loop."
+  }
+];
+---
+
+<section class="container-padding w-full" id="keep-track">
+  <div class="container mx-auto flex flex-col-reverse lg:flex-row">
+    <!-- FEAT IMAGE -->
+    <div class="flex w-full justify-center lg:w-1/2">
+      <img
+        src={FeatOneImg.src}
+        alt="Trade Now Image"
+        width="440"
+        loading="lazy"
+        decoding="async"
+        class="lg:w-[440px mt-8 w-[330px] max-w-full lg:mt-0"
+        data-aos="fade-up"
+      />
+    </div>
+    <!-- FEAT DESCRIPTION -->
+    <div class="flex w-full flex-col justify-center !px-5 lg:w-1/2 lg:px-0">
+      <h2 class="mb-8 text-5xl font-bold text-primary xl:text-6xl">
+        <span class="block whitespace-nowrap" data-aos="fade-right">
+          Keep Track
+        </span>
+        <span
+          class="block w-full whitespace-nowrap pt-3 text-3xl font-bold text-secondary xl:text-[40px]"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
+          all the way Home!
+        </span>
+      </h2>
+      <!-- BULLETPOINTS -->
+      <div data-aos="fade-in" data-aos-delay="300">
+        {
+          FeatTwoBulletpoints.map((bullet) => (
+            <div class="mb-3 flex max-w-[650px] gap-3">
+              <Icon
+                name={"material-symbols:check-circle-rounded"}
+                size={20}
+                class="mt-1 shrink-0 !text-primary"
+              />
+              <p class="text-sm lg:text-lg">
+                <span class="font-bold">{bullet.title}:</span>
+                {bullet.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

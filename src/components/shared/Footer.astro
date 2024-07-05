@@ -1,0 +1,68 @@
+---
+import Logo from "@assets/img/logo_adx.svg";
+---
+
+<footer class="container-padding w-full !pb-12">
+  <div class="container mx-auto flex flex-col gap-6">
+    <div class="flex flex-col gap-12 xl:flex-row">
+      <div class="flex gap-16">
+        <!-- LOGO -->
+        <img
+          src={Logo.src}
+          alt="ADX Logo"
+          title="ADX | Transform your Grains & Pulses Shopping Experience"
+          width="112"
+          loading="lazy"
+          decoding="async"
+          class="h-fit"
+        />
+        <!-- NAVIGATION -->
+        <div class="grid w-fit grid-cols-1 gap-y-2 sm:grid-cols-3">
+          <article class="block">
+            <h4 class="mb-3 font-bold">Company</h4>
+            <a href="#" class="block text-sm hover:text-primary">About</a>
+          </article>
+          <article class="block">
+            <h4 class="mb-3 font-bold">Resources</h4>
+            <a href="#" class="block text-sm hover:text-primary">Site Widgets</a
+            >
+            <a href="#" class="block text-sm hover:text-primary"
+              >Market Data API</a
+            >
+          </article>
+          <article class="block">
+            <h4 class="mb-3 font-bold">Support</h4>
+            <a href="#" class="block text-sm hover:text-primary">Help Center</a>
+            <a href="#" class="block text-sm hover:text-primary"
+              >Change Request Form</a
+            >
+          </article>
+        </div>
+      </div>
+      <!-- INFO -->
+      <div class="flex-1">
+        <p class="mb-6 text-justify text-xs lg:text-base">
+          The purpose of this website is solely to display information regarding
+          the products and services available on the adx.com web. It is not
+          intended to offer access to any of such products and services. You may
+          obtain access to such products and services on the Trackbazaar.com
+          App.
+        </p>
+        <p class="text-justify text-xs lg:text-base">
+          Please note that the availability of the products and services on the
+          Trackbazaar.com App is subject to jurisdictional limitations.
+          Trackbazaar.com may not offer certain products, features and/or
+          services on the Trackbazaar.com App in certain jurisdictions due to
+          potential or actual regulatory restrictions.
+        </p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-center text-xs lg:mt-32 lg:text-left lg:text-base">
+      Copyright © 2024 adx.com. All rights reserved.
+      <span class="block w-full lg:inline">
+        Terms and Conditions | Privacy Notice | Status | Cookie Preferences
+      </span>
+    </p>
+  </div>
+</footer>

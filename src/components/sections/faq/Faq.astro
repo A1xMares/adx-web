@@ -1,0 +1,41 @@
+---
+import Accordion from "@/components/shared/Accordion.astro";
+---
+
+<section class="container-padding mt-12 w-full bg-adxlight !py-16" id="faq">
+  <div
+    class="container mx-auto flex flex-col gap-x-16 gap-y-6 lg:flex-row lg:justify-center"
+  >
+    <h3 class="pl-5 text-2xl font-bold lg:pl-0">
+      Frequently
+      <span class="block w-full whitespace-nowrap">Asked Questions</span>
+    </h3>
+    <!-- FAQ COMPONENT -->
+    <div class="flex w-full max-w-[550px] flex-col gap-3">
+      <Accordion
+        title="What is ADX?"
+        details="ADX is an innovative platform designed to transform the grains and pulses shopping experience for the general consumer. It allows individuals to buy and sell commodities globally in a new, open market. ADX offers simplified and secure transactions, real-time updates on prices and market trends, and is supported by a 100% delivery guarantee. It brings the expertise and reliability of Adroit Overseas, a leading B2B agri-processing company, to everyday consumers."
+      />
+      <Accordion
+        title=" How long does it take for my order to be delivered?"
+        details="The delivery time for your order varies depending on the commodity, shipping method, and destination. Typical delivery dates are specified with each order listing. For instance, some recent orders have delivery dates set for JUN / JUL 2024. You can track your order's status and receive updates through the ADX platform."
+      />
+      <Accordion
+        title="What are the shipping options available?"
+        details="ADX offers various shipping options tailored to the commodity and destination. Our listings provide details such as packaging type (e.g., bulk or bags) and tracking locations (e.g., Vancouver, Mazatlan, Seattle). You can select the shipping option that best fits your needs during the order process."
+      />
+      <Accordion
+        title="Can I change my delivery address after placing an order?"
+        details="Yes, you can change your delivery address after placing an order, as long as the order has not been processed for shipment yet. To update your delivery address, please contact our customer support team as soon as possible for assistance."
+      />
+      <Accordion
+        title="Are there any additional fees for processing payments?"
+        details="While ADX aims to keep transactions straightforward and transparent, there might be additional fees associated with processing payments depending on the payment method and currency used. Specific details regarding any additional fees will be provided during the checkout process."
+      />
+      <Accordion
+        title="What currencies do you accept?"
+        details="ADX accepts multiple currencies to facilitate global transactions. The accepted currencies will be displayed during the payment process. If you have specific questions about currencies, please contact our customer support for more information."
+      />
+    </div>
+  </div>
+</section>

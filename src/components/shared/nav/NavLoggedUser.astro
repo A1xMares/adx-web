@@ -1,0 +1,22 @@
+---
+import IconUser from "@assets/icons/icon_user.svg";
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="flex items-center justify-end gap-3 border-b border-gray-200 py-4 lg:justify-start lg:border-b-0 lg:py-0"
+>
+  <img
+    src={IconUser.src}
+    alt="User Icon"
+    width="28"
+    loading="eager"
+    decoding="sync"
+  />
+  <span class="font-regular text-lg text-secondary">Edgar Cerecer</span>
+  <Icon
+    name={"material-symbols:keyboard-arrow-down-rounded"}
+    size={24}
+    class="hidden text-secondary lg:block"
+  />
+</div>

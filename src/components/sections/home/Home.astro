@@ -1,0 +1,80 @@
+---
+import { Icon } from "astro-icon/components";
+import HomeSalesList from "./HomeSalesList.astro";
+
+const ContentBulletpoints = [
+  {
+    title: "More Market Opportunities",
+    description: "Buy commodities anywhere in the world in a new open market."
+  },
+  {
+    title: "Simplified Transactions",
+    description: "It’s simple and secure."
+  },
+  {
+    title: "Stay Informed About the Market",
+    description: "Get real-time updates on prices and market trends."
+  },
+  {
+    title: "Supported by Adroit Overseas",
+    description: "100% Delivery Guaranty"
+  }
+];
+---
+
+<section
+  class="container-padding w-full items-center !pt-6 lg:flex lg:h-[calc(100vh-63px)] lg:min-h-[750px] lg:!pt-24"
+  id="trade-now"
+>
+  <div class="container mx-auto">
+    <div class="flex flex-col lg:flex-row">
+      <!-- LEFT SIDE -->
+      <div class="w-full lg:w-1/2" data-aos="fade-right">
+        <div class="!px-5 lg:max-w-[570px] lg:px-0">
+          <!-- TITLE -->
+          <h2
+            class="mb-6 text-4xl font-bold leading-[52px] sm:text-5xl xl:text-6xl"
+          >
+            <span class="block whitespace-nowrap"> Transform your </span>
+            <span
+              class="block whitespace-nowrap text-5xl text-primary sm:text-6xl xl:text-7xl"
+            >
+              Grains & Pulses
+            </span>
+            <span class="block whitespace-nowrap"> Shopping Experience </span>
+          </h2>
+          <!-- BULLETPOINTS -->
+          <div>
+            {
+              ContentBulletpoints.map((bullet, index) => (
+                <div class="mb-3 flex gap-3">
+                  <Icon
+                    name={"material-symbols:check-circle-rounded"}
+                    size={20}
+                    class="mt-1 shrink-0 !text-primary"
+                  />
+                  <p class="text-sm sm:text-lg">
+                    <span class="font-bold">{bullet.title}:</span>
+                    {bullet.description}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+
+          <!-- BUTTON -->
+          <div class="mt-8 flex justify-center sm:mt-12">
+            <a class="primary-button w-full lg:max-w-[375px]" href="#">
+              Start Trading Now!
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="w-full pt-10 lg:w-1/2 lg:pt-0">
+        <HomeSalesList />
+      </div>
+    </div>
+  </div>
+</section>

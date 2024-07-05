@@ -1,0 +1,74 @@
+---
+import FeatTwoImg from "@assets/img/image_phone2.png";
+import { Icon } from "astro-icon/components";
+const FeatTwoBulletpoints = [
+  {
+    title: "Monitor Your Contracts",
+    description:
+      "Easily keep track of all your orders and see their current status, whether they’re pending, on delivery or in process."
+  },
+  {
+    title: "Quick Access to Details",
+    description:
+      "With a simple click, dive into the specifics of each order for a clear overview."
+  },
+  {
+    title: "Easy Order Review",
+    description:
+      "Click into any order to get the full details, download the contract PDF, and stay informed."
+  }
+];
+---
+
+<section class="container-padding w-full" id="stay-updated">
+  <div class="container mx-auto flex flex-col lg:flex-row">
+    <!-- FEAT DESCRIPTION -->
+    <div class="flex w-full flex-col justify-center lg:w-1/2 lg:items-end">
+      <div class="max-w-[650px] !px-5 lg:px-0">
+        <h2 class="mb-8 text-5xl font-bold text-primary xl:text-6xl">
+          <span class="block whitespace-nowrap" data-aos="fade-right">
+            Stay Updated
+          </span>
+          <span
+            class="block w-full whitespace-nowrap pt-3 text-3xl font-bold text-secondary xl:text-[40px]"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            on all your Contracts
+          </span>
+        </h2>
+        <!-- BULLETPOINTS -->
+        <div data-aos="fade-in" data-aos-delay="300">
+          {
+            FeatTwoBulletpoints.map((bullet) => (
+              <div class="mb-3 flex gap-3">
+                <Icon
+                  name={"material-symbols:check-circle-rounded"}
+                  size={20}
+                  class="mt-1 shrink-0 !text-primary"
+                />
+                <p class="text-sm sm:text-lg">
+                  <span class="font-bold">{bullet.title}:</span>
+                  {bullet.description}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- FEAT IMAGE -->
+    <div class="flex w-full justify-center lg:w-1/2">
+      <img
+        src={FeatTwoImg.src}
+        alt="Trade Now Image"
+        width="330"
+        loading="lazy"
+        decoding="async"
+        class="mt-8 w-[252px] max-w-full lg:mt-0 lg:w-[330px]"
+        data-aos="flip-right"
+      />
+    </div>
+  </div>
+</section>

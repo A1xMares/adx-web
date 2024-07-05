@@ -1,0 +1,160 @@
+---
+import IconUsa from "@assets/icons/icon_usa.svg";
+import IconCanada from "@assets/icons/icon_canada.svg";
+import IconMexico from "@assets/icons/icon_mexico.svg";
+import IconDate from "@assets/icons/icon_date.svg";
+import IconMT from "@assets/icons/icon_MT.svg";
+import IconBag from "@assets/icons/icon_bag.svg";
+import FakeChart from "@assets/img/fake-chart.svg";
+import { Icon } from "astro-icon/components";
+
+const SalesList = [
+  {
+    title: "Whole Red Lentils #2",
+    subtitle: "Machine cleaned",
+    dates: "JUN / JUL 2024",
+    amount: "180",
+    package: "Bulk",
+    price: "415",
+    track: "Vancouver",
+    img: IconCanada
+  },
+  {
+    title: "Kabuli Chickpeas #2",
+    subtitle: "Machine cleaned",
+    dates: "JUN / JUL 2024",
+    amount: "240",
+    package: "25 Kg Bags",
+    price: "510",
+    track: "Mazatlan",
+    img: IconMexico
+  },
+  {
+    title: "Whole Yellow Peas #2",
+    subtitle: "Machine cleaned",
+    dates: "JUN / JUL 2024",
+    amount: "180",
+    package: "Bulk",
+    price: "247",
+    track: "Seattle",
+    img: IconUsa
+  },
+  {
+    title: "Laird Lentils #3",
+    subtitle: "Machine cleaned",
+    dates: "JUN / JUL 2024",
+    amount: "250",
+    package: "50 Kg Bags",
+    price: "480",
+    track: "FOB Manzanillo",
+    img: IconMexico
+  }
+];
+---
+
+<div class="flex w-full flex-col items-center lg:pl-16">
+  <div class="w-full lg:max-w-[500px]">
+    <!-- SALES FILTER -->
+    <div class="mb-4 flex gap-4 pl-3 lg:pl-6" data-aos="fade-in">
+      <button class="text-base font-bold text-primary lg:text-lg">
+        Popular
+      </button>
+      <button class="text-sm hover:text-primary lg:text-base">
+        Recent Sales Orders
+      </button>
+    </div>
+
+    <!-- SALES LIST -->
+    <div class="flex w-full flex-col gap-3">
+      {
+        SalesList.map((sale, index) => (
+          <article
+            class="flex cursor-pointer justify-between rounded-lg border border-gray-200 px-5 py-2 shadow transition-shadow hover:shadow-lg"
+            data-aos="fade-left"
+            data-aos-delay={`${index}00`}
+          >
+            {/* LEFT SIDE */}
+            <div class="flex flex-col gap-1">
+              {/* TITLE*/}
+              <div class="flex items-center gap-2">
+                <img
+                  src={sale.img.src}
+                  alt={sale.title}
+                  width="24"
+                  loading="eager"
+                  decoding="sync"
+                />
+                <div class="">
+                  <p class="font-bold">{sale.title}</p>
+                  <p class="text-sm">{sale.subtitle}</p>
+                </div>
+              </div>
+              {/* DATES */}
+              <div class="flex items-center gap-2">
+                <img
+                  src={IconDate.src}
+                  alt="Date Icon"
+                  width="20"
+                  loading="eager"
+                  decoding="sync"
+                />
+                <p class="text-sm">{sale.dates}</p>
+              </div>
+              {/* AMOUNT - PACKAGE */}
+              <div class="flex items-center gap-16">
+                <div class="flex items-center gap-2">
+                  <img
+                    src={IconMT.src}
+                    alt="MT Icon"
+                    width="20"
+                    loading="eager"
+                    decoding="sync"
+                  />
+                  <p class="text-sm">{sale.amount} MT</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img
+                    src={IconBag.src}
+                    alt="Bag Icon"
+                    width="20"
+                    loading="eager"
+                    decoding="sync"
+                  />
+                  <p class="text-sm">{sale.package}</p>
+                </div>
+              </div>
+            </div>
+            {/* RIGHT SIDE */}
+            <div class="flex flex-col items-end gap-1">
+              <img
+                src={FakeChart.src}
+                alt="Fake Chart"
+                width="100"
+                loading="eager"
+                decoding="sync"
+              />
+              <p class="font-bold">USD ${sale.price}/MT</p>
+              <p class="">Track {sale.track}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <!-- SALES FILTER -->
+    <div
+      class="mt-4 flex gap-4 pl-3 lg:pl-6"
+      data-aos="fade-in"
+      data-aos-delay="500"
+    >
+      <button class="group flex items-center gap-1 hover:!text-primary">
+        View all sales orders
+        <Icon
+          name={"material-symbols:chevron-right-rounded"}
+          size={18}
+          class="shrink-0 text-secondary group-hover:text-primary"
+        />
+      </button>
+    </div>
+  </div>
+</div>

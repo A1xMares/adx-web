@@ -1,0 +1,64 @@
+---
+import FeatOneImg from "@assets/img/image_phone1.png";
+import FeatOneMobileImg from "@assets/img/image_phone1_mobile.png";
+import FeatOneQrImg from "@assets/img/qr-code.svg";
+---
+
+<section class="container-padding w-full" id="trade-now">
+  <div class="container mx-auto flex flex-col-reverse lg:flex-row">
+    <!-- FEAT IMAGE -->
+    <div class="flex w-full justify-center lg:w-1/2">
+      <img
+        src={FeatOneImg.src}
+        alt="Trade Now Image"
+        width="330"
+        loading="lazy"
+        decoding="async"
+        class="hidden lg:block"
+        data-aos="flip-left"
+      />
+      <img
+        src={FeatOneMobileImg.src}
+        alt="Trade Now Image"
+        width="330"
+        loading="lazy"
+        decoding="async"
+        class="mt-8 block lg:hidden"
+        data-aos="flip-left"
+      />
+    </div>
+    <!-- FEAT DESCRIPTION -->
+    <div class="flex w-full flex-col justify-center !px-5 lg:w-1/2 lg:px-0">
+      <h2 class="mb-8 text-5xl font-bold text-primary xl:text-6xl">
+        <span class="block whitespace-nowrap" data-aos="fade-right">
+          Trade now
+        </span>
+        <span
+          class="block w-full whitespace-nowrap pt-3 text-3xl font-bold text-secondary xl:text-[40px]"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
+          Anywhere, Anytime.
+        </span>
+      </h2>
+      <div
+        class="flex flex-col items-center gap-6 sm:flex-row"
+        data-aos="fade-in"
+        data-aos-delay="300"
+      >
+        <img
+          src={FeatOneQrImg.src}
+          alt="QR Code Image"
+          width="216"
+          loading="lazy"
+          decoding="async"
+          class=""
+        />
+        <div class="w-full sm:w-fit">
+          <p class="text-lg">Scan to download the app</p>
+          <p class="text-xl font-bold">iOS and Android</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

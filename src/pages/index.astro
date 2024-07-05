@@ -1,0 +1,22 @@
+---
+import Home from "@/components/sections/home/Home.astro";
+import Layout from "@/layouts/Layout.astro";
+import FeatureOne from "@/components/sections/feature-one/FeatureOne.astro";
+import "../styles/animations.css";
+import "../styles/button.css";
+import FeatureTwo from "@/components/sections/feature-two/FeatureTwo.astro";
+import FeatureThree from "@/components/sections/feature-three/FeatureThree.astro";
+import Stats from "@/components/sections/stats/Stats.astro";
+import Faq from "@/components/sections/faq/Faq.astro";
+---
+
+<Layout>
+  <main class="pt-16">
+    <Home />
+    <FeatureOne />
+    <FeatureTwo />
+    <FeatureThree />
+    <Stats />
+    <Faq />
+  </main>
+</Layout>

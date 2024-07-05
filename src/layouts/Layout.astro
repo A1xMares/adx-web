@@ -1,0 +1,130 @@
+---
+import Footer from "../components/shared/Footer.astro";
+import Navbar from "../components/shared/nav/Navbar.astro";
+import "@fontsource/sarabun";
+import "aos/dist/aos.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://grupomaca.com/" />
+    <meta
+      name="description"
+      content="Somos tu socio en maquinaria y capacitación ante la STPS. Consultorías y cursos presenciales con constancias DC-3."
+    />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="author" href="/humans.txt" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon.ico" />
+    <link rel="mask-icon" href="/favicon.ico" color="#000" />
+
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="sitemap"
+      href="/sitemap-index.xml"
+    />
+
+    <meta
+      property="og:title"
+      content="ADX | Transform your Grains & Pulses Shopping Experience"
+    />
+    <meta
+      property="og:site_name"
+      content="ADX | Transform your Grains & Pulses Shopping Experience"
+    />
+    <meta property="og:image:alt" content="ADX" />
+    <meta property="og:url" content="https://grupomaca.com/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Somos tu socio en maquinaria y capacitación ante la STPS. Consultorías y cursos presenciales con constancias DC-3."
+    />
+    <meta
+      property="og:image"
+      content="https://grupomaca.com/maca-sharing.webp"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="twitter:card" content="summary" />
+    <meta
+      property="twitter:title"
+      content="ADX | Transform your Grains & Pulses Shopping Experience"
+    />
+    <meta
+      property="twitter:description"
+      content="Somos tu socio en maquinaria y capacitación ante la STPS. Consultorías y cursos presenciales con constancias DC-3."
+    />
+    <meta
+      property="twitter:image"
+      content="https://grupomaca.com/maca-sharing.webp"
+    />
+    <meta
+      property="twitter:image:alt"
+      content="ADX | Transform your Grains & Pulses Shopping Experience"
+    />
+
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "ADX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "",
+          "postalCode": "",
+          "streetAddress": ""
+        },
+        "email": "",
+        "telephone": "",
+        "url": "",
+        "sameAs": []
+      }
+    </script>
+
+    <meta name="generator" content={Astro.generator} />
+    <title>ADX | Transform your Grains & Pulses Shopping Experience</title>
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+
+    <script>
+      import { aosInit } from "@/js/aos";
+      aosInit();
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Sarabun", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    @apply text-secondary;
+  }
+
+  .container-padding {
+    @apply px-4 py-16 md:px-12 lg:px-24 lg:py-24;
+  }
+
+  .text-paragraph {
+    @apply text-base xl:text-lg;
+  }
+</style>

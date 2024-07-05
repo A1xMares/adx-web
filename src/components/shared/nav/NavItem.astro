@@ -1,0 +1,11 @@
+---
+const { label, url } = Astro.props;
+---
+
+<a
+  href={url}
+  class="w-full border-b border-gray-200 py-4 text-right text-lg font-bold text-secondary hover:text-primary lg:border-b-0 lg:py-0 lg:text-left"
+  nav-item
+>
+  {label}
+</a>

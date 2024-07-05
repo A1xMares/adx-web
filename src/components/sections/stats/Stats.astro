@@ -1,0 +1,153 @@
+---
+import PlantIcon from "@assets/icons/icon_plant.svg";
+import TeamIcon from "@assets/icons/icon_team.svg";
+import NetworkIcon from "@assets/icons/icon_network.svg";
+import HeasdsetIcon from "@assets/icons/icon_headset.svg";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="container-padding w-full" id="stats">
+  <div class="container mx-auto flex flex-col items-center gap-6 lg:px-8">
+    <h2
+      class="max-w-[300px] text-center text-3xl font-bold text-secondary lg:max-w-fit xl:text-[40px]"
+      data-aos="fade-in"
+    >
+      Purchase and Sell, with confidence
+    </h2>
+    <p
+      class="max-w-[1050px] px-5 text-justify text-sm sm:text-lg lg:px-0 lg:text-2xl"
+      data-aos="fade-in"
+      data-aos-delay="100"
+    >
+      We are an Integrated Agri Processing Company with a global footprints. We
+      specialize in processing and supplying pulses, grains, food & feed
+      ingredients, and oil seeds to a diverse customer base spanning more than
+      30 countries.
+    </p>
+    <!-- STATS GRID -->
+    <div class="grid w-full max-w-[1000px] grid-cols-2 gap-y-6 lg:grid-cols-3">
+      <!--  -->
+      <article
+        class="flex w-full flex-col items-center gap-2"
+        data-aos="flip-right"
+        data-aos-delay="100"
+      >
+        <img
+          src={PlantIcon.src}
+          alt="Plant Icon"
+          width="50"
+          loading="lazy"
+          decoding="async"
+          class="w-[30px] lg:w-[50px]"
+        />
+        <h3 class="whitespace-nowrap text-base font-bold lg:text-2xl">
+          Processing Plants
+        </h3>
+        <p
+          class="max-w-[110px] text-center text-sm lg:max-w-[200px] lg:text-lg"
+        >
+          Working with 10+ operating plants.
+        </p>
+      </article>
+      <!--  -->
+      <article
+        class="flex w-full flex-col items-center gap-2"
+        data-aos="flip-right"
+        data-aos-delay="200"
+      >
+        <img
+          src={TeamIcon.src}
+          alt="Team Icon"
+          width="50"
+          loading="lazy"
+          decoding="async"
+          class="w-[30px] lg:w-[50px]"
+        />
+        <h3 class="whitespace-nowrap text-base font-bold lg:text-2xl">
+          Highly trained team
+        </h3>
+        <p
+          class="max-w-[120px] text-center text-sm lg:max-w-[200px] lg:text-lg"
+        >
+          Skilled experts with extensive training.
+        </p>
+      </article>
+      <!--  -->
+      <article
+        class="order-last flex flex-col items-center justify-center gap-2 lg:order-none"
+        data-aos="flip-right"
+        data-aos-delay="300"
+      >
+        <h3
+          class="whitespace-nowrap text-2xl font-bold text-primary lg:text-6xl"
+        >
+          270,000+
+        </h3>
+        <p class="text-center text-base font-bold lg:text-xl">
+          MT Annual Volume
+        </p>
+      </article>
+      <!--  -->
+      <article
+        class="flex flex-col items-center gap-2"
+        data-aos="flip-right"
+        data-aos-delay="400"
+      >
+        <img
+          src={NetworkIcon.src}
+          alt="Network Icon"
+          width="50"
+          loading="lazy"
+          decoding="async"
+          class="w-[30px] lg:w-[50px]"
+        />
+        <h3 class="whitespace-nowrap text-base font-bold lg:text-2xl">
+          Worldwide Network
+        </h3>
+        <p
+          class="max-w-[120px] text-center text-sm lg:max-w-[150px] lg:text-lg"
+        >
+          We have presence over 30 countries.
+        </p>
+      </article>
+      <!--  -->
+      <article
+        class="flex flex-col items-center gap-2"
+        data-aos="flip-right"
+        data-aos-delay="500"
+      >
+        <img
+          src={HeasdsetIcon.src}
+          alt="Customer support Icon"
+          width="50"
+          loading="lazy"
+          decoding="async"
+          class="w-[30px] lg:w-[50px]"
+        />
+        <h3 class="whitespace-nowrap text-base font-bold lg:text-2xl">
+          Customer Support
+        </h3>
+        <p
+          class="max-w-[130px] text-center text-sm lg:max-w-[160px] lg:text-lg"
+        >
+          Technical assistance at any time.
+        </p>
+      </article>
+      <!--  -->
+      <article
+        class="order-last flex flex-col items-center justify-center gap-2 lg:order-none"
+        data-aos="flip-right"
+        data-aos-delay="600"
+      >
+        <h3
+          class="whitespace-nowrap text-2xl font-bold text-primary lg:text-6xl"
+        >
+          100+
+        </h3>
+        <p class="text-center text-base font-bold lg:text-xl">
+          High Quality Products
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
