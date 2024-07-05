@@ -1,5 +1,6 @@
 ---
 import FeatOneImg from "@assets/img/image_phone1.webp";
+import FeatOneText from "@assets/img/image_phone1_text.webp";
 import FeatOneMobileImg from "@assets/img/image_phone1_mobile.webp";
 import FeatOneQrImg from "@assets/img/qr-code.svg";
 ---
@@ -8,27 +9,40 @@ import FeatOneQrImg from "@assets/img/qr-code.svg";
   <div class="container mx-auto flex flex-col-reverse lg:flex-row">
     <!-- FEAT IMAGE -->
     <div class="flex w-full justify-center lg:w-1/2">
-      <img
-        src={FeatOneImg.src}
-        alt="Trade Now Image"
-        width="330"
-        loading="lazy"
-        decoding="async"
-        class="hidden lg:block"
-        data-aos="flip-left"
-      />
+      <div class="relative hidden overflow-visible lg:block">
+        <img
+          src={FeatOneImg.src}
+          alt="Trade Now Image"
+          width="330"
+          loading="lazy"
+          decoding="async"
+          class="relative z-10 h-[627px] w-[330px]"
+          data-aos="flip-left"
+        />
+        <img
+          src={FeatOneText.src}
+          alt="Trade Now Image"
+          width="510"
+          loading="lazy"
+          decoding="async"
+          class="absolute bottom-[50px] left-[320px] z-0 h-[80px] !w-[510px] !max-w-[510px]"
+          data-aos="fade-right"
+          data-aos-delay="300"
+        />
+      </div>
+
       <img
         src={FeatOneMobileImg.src}
         alt="Trade Now Image"
         width="330"
         loading="lazy"
         decoding="async"
-        class="mt-8 block lg:hidden"
+        class="mt-8 block h-[567px] w-[330px] max-w-full lg:hidden"
         data-aos="flip-left"
       />
     </div>
     <!-- FEAT DESCRIPTION -->
-    <div class="flex w-full flex-col justify-center !px-5 lg:w-1/2 lg:px-0">
+    <div class="flex w-full flex-col justify-center !px-4 lg:w-1/2 lg:px-0">
       <h2 class="mb-8 text-5xl font-bold text-primary xl:text-6xl">
         <span class="block whitespace-nowrap" data-aos="fade-right">
           Trade now
@@ -42,7 +56,7 @@ import FeatOneQrImg from "@assets/img/qr-code.svg";
         </span>
       </h2>
       <div
-        class="flex flex-col items-center gap-6 sm:flex-row"
+        class="flex flex-col items-center gap-6 sm:flex-row lg:pb-[120px]"
         data-aos="fade-in"
         data-aos-delay="300"
       >
@@ -52,7 +66,7 @@ import FeatOneQrImg from "@assets/img/qr-code.svg";
           width="216"
           loading="lazy"
           decoding="async"
-          class=""
+          class="h-[216px] w-[216px]"
         />
         <div class="w-full sm:w-fit">
           <p class="text-lg">Scan to download the app</p>

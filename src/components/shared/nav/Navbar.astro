@@ -14,7 +14,7 @@ const NavItems = [
 
 <nav data-open="false" id="nav-container" class="group">
   <div
-    class="fixed z-50 block h-16 w-full border-b border-gray-200 bg-white !py-0 px-4 group-data-[open=true]:border-b-0 lg:px-5"
+    class="fixed z-50 block h-16 w-full border-b border-gray-200 bg-white !py-0 px-4 group-data-[open=true]:border-b-0 lg:px-4"
   >
     <!-- NAVBAR CONTENT -->
     <div
@@ -75,7 +75,7 @@ const NavItems = [
     id="nav-panel"
     class="fadeInLeft 0 fixed bottom-0 left-0 right-0 top-16 z-40 hidden bg-white group-data-[open=true]:block"
   >
-    <div class="flex w-full flex-col px-5">
+    <div class="flex w-full flex-col px-4">
       {NavItems.map(({ label, url }) => <NavItem label={label} url={url} />)}
       <NavLoggedUser />
       <NavLangCurrency />

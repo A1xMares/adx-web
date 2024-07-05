@@ -1,5 +1,5 @@
 .primary-button {
-  @apply flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-2xl border-0 px-4 py-2 text-base font-bold transition-all duration-200 focus:outline-none focus:ring sm:h-12 sm:px-5 sm:text-xl xl:px-8 xl:text-2xl;
+  @apply flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-2xl border-0 px-4 py-2 text-base font-bold transition-all duration-200 focus:outline-none focus:ring sm:h-12 sm:px-4 sm:text-xl xl:px-8 xl:text-2xl;
 }
 
 .primary-button {

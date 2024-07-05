@@ -69,7 +69,7 @@ const SalesList = [
       {
         SalesList.map((sale, index) => (
           <article
-            class="flex cursor-pointer justify-between rounded-lg border border-gray-200 px-5 py-2 shadow transition-shadow hover:shadow-lg"
+            class="flex cursor-pointer justify-between rounded-lg border border-gray-200 px-4 py-2 shadow transition-shadow hover:shadow-lg"
             data-aos="fade-left"
             data-aos-delay={`${index}00`}
           >
@@ -85,8 +85,8 @@ const SalesList = [
                   decoding="sync"
                 />
                 <div class="">
-                  <p class="font-bold">{sale.title}</p>
-                  <p class="text-sm">{sale.subtitle}</p>
+                  <p class="text-xs font-bold sm:text-base">{sale.title}</p>
+                  <p class="text-xs sm:text-sm">{sale.subtitle}</p>
                 </div>
               </div>
               {/* DATES */}
@@ -98,10 +98,10 @@ const SalesList = [
                   loading="eager"
                   decoding="sync"
                 />
-                <p class="text-sm">{sale.dates}</p>
+                <p class="text-xs sm:text-sm">{sale.dates}</p>
               </div>
               {/* AMOUNT - PACKAGE */}
-              <div class="flex items-center gap-16">
+              <div class="flex items-center gap-6 sm:gap-16">
                 <div class="flex items-center gap-2">
                   <img
                     src={IconMT.src}
@@ -110,7 +110,7 @@ const SalesList = [
                     loading="eager"
                     decoding="sync"
                   />
-                  <p class="text-sm">{sale.amount} MT</p>
+                  <p class="text-xs sm:text-sm">{sale.amount} MT</p>
                 </div>
                 <div class="flex items-center gap-2">
                   <img
@@ -120,7 +120,7 @@ const SalesList = [
                     loading="eager"
                     decoding="sync"
                   />
-                  <p class="text-sm">{sale.package}</p>
+                  <p class="text-xs sm:text-sm">{sale.package}</p>
                 </div>
               </div>
             </div>
@@ -133,8 +133,8 @@ const SalesList = [
                 loading="eager"
                 decoding="sync"
               />
-              <p class="font-bold">USD ${sale.price}/MT</p>
-              <p class="">Track {sale.track}</p>
+              <p class="text-xs font-bold sm:text-base">USD ${sale.price}/MT</p>
+              <p class="text-xs sm:text-base">Track {sale.track}</p>
             </div>
           </article>
         ))
