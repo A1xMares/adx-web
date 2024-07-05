@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://test-hosting-2c278.web.app/sitemap-index.xml
+
