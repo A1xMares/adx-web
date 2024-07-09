@@ -6,9 +6,9 @@ import NavLangCurrency from "./NavLangCurrency.astro";
 import NavItem from "./NavItem.astro";
 
 const NavItems = [
-  { label: "Market", url: "#market" },
-  { label: "My Listing", url: "#my-listing" },
-  { label: "Hot Deals", url: "#hot-deals" }
+  { label: "Market", url: "#home" }
+  // { label: "My Listing", url: "#my-listing" },
+  // { label: "Hot Deals", url: "#hot-deals" }
 ];
 ---
 
@@ -50,7 +50,7 @@ const NavItems = [
 
       <!-- DESKTOP RIGHT SIDE NAV -->
       <div class="hidden items-center gap-4 lg:flex">
-        <NavLoggedUser />
+        <!-- <NavLoggedUser /> -->
         <NavLangCurrency />
       </div>
 

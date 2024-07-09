@@ -55,7 +55,11 @@ const SalesList = [
 <div class="flex w-full flex-col items-center lg:pl-16">
   <div class="w-full lg:max-w-[500px]">
     <!-- SALES FILTER -->
-    <div class="mb-4 flex gap-4 pl-3 lg:pl-6" data-aos="fade-in">
+    <div
+      class="mb-4 flex gap-4 pl-3 lg:pl-6"
+      data-aos="fade-in"
+      data-aos-offset="-800"
+    >
       <button class="text-base font-bold text-primary lg:text-lg">
         Popular
       </button>
@@ -71,6 +75,7 @@ const SalesList = [
           <article
             class="flex cursor-pointer justify-between rounded-lg border border-gray-200 px-4 py-2 shadow transition-shadow hover:shadow-lg"
             data-aos="fade-left"
+            data-aos-offset="-800"
             data-aos-delay={`${index}00`}
           >
             {/* LEFT SIDE */}
@@ -146,6 +151,7 @@ const SalesList = [
       class="mt-4 flex gap-4 pl-3 lg:pl-6"
       data-aos="fade-in"
       data-aos-delay="500"
+      data-aos-offset="-800"
     >
       <button class="group flex items-center gap-1 hover:!text-primary">
         View all sales orders
